@@ -7,6 +7,7 @@ body{
     flex-direction: column;
     background: url(../img/wall.jpg) no-repeat;
     background-size: cover;
+    font-family: 'Chivo Mono', monospace;
 }
 body:before{
     content:'';
@@ -14,7 +15,8 @@ body:before{
     height: 100%;
     background: rgba(243, 136, 10, 0.2);
     position: absolute;
-
+    z-index: 2;
+   
 }
 /*wall-clock*/
 .wall-clock{
@@ -22,6 +24,7 @@ body:before{
     justify-content: center;
     align-items: center;
     position: relative;
+  
 }
 
 
@@ -34,7 +37,7 @@ body:before{
     width: 700px;
     height: 700px;
     border-radius: 50%;
-    z-index: -1;
+    z-index: 1;
     -webkit-box-shadow: 3px 2px 15px 28px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 3px 2px 15px 28px rgba(0, 0, 0, 0.5);
     box-shadow: 3px 2px 15px 28px rgba(0, 0, 0, 0.5);
@@ -44,10 +47,12 @@ body:before{
     background: url(../img/clock.png) no-repeat;
     background-size: cover;
     display: flex;
-    width: 700px;
-    height: 700px;
+    width: 670px;
+    height: 670px;
     justify-content: center;
     align-items: center;
+    margin: 20px 0 0 0;
+    z-index: 2;
 }
 
 .clock:before{
@@ -110,7 +115,7 @@ body:before{
     justify-content: center;
     position: relative;
     border-radius: 50%;
-    z-index: 1;
+    z-index:0;
 }
 .ss:before{
     content: '';
@@ -128,31 +133,33 @@ body:before{
 
 .digital-clock{
     width: 700px;
-    height: 193px;
+    height: 153px;
     background: rgba(255, 255, 255, 0.79);
     border-radius: 110px;
-    margin: 20px auto 0 auto;
+    margin: 30px auto 0 auto;
     font-size: 90px;
-    font-weight: 700;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
     letter-spacing: 0.3rem;
     position: relative;
-    z-index: -1;
+    z-index: 1;
     color:#0f0f0f;
     -webkit-box-shadow: 3px 2px 15px 28px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 3px 2px 15px 28px rgba(0, 0, 0, 0.5);
     box-shadow: 3px 2px 15px 28px rgba(0, 0, 0, 0.5);
-
-}
-.digital-clock .two-dots{
-    position: absolute;
-    top: 0;
-    left: 0;
+    
 }
 
+.digital-min,
+.digital-hour,
+.digital-sec{
+    -webkit-text-stroke: 3px white;
+    -webkit-text-fill-color: black;
+    margin: 10px 0 0 0;
 
+}
 
 
 
